@@ -18,16 +18,25 @@ class V1::HousesController < ApplicationController
     end
   end
 
-  def update; end
+  def update
+    @house = House.find(params[:id])
+    if @house.update(house_params)
+      render json: @house, status: 200, message: 'house updated successfully'
+    else
+      render json: @house.errors, status: :unprocessable_entity
+    end
+  end
 
   def destroy
-     @house = House.find(params[:id])
-     @house.destroy
-     render json: { status: 200, message: 'Record deleted successfully' }
+    @house = House.find(params[:id])
+    @house.destroy
+    render json: { status: 200, message: 'Record deleted successfully' }
   end
 
   private
+
   def house_params
-    params.require(:house).permit(:address, :city, :zip_code, :image, :bathrooms, :rooms, :surroundings, :price, :construction_year)
+    params.require(:house).permit(:user_id, :address, :city, :zip_code, :image, :bathrooms, :rooms, :surroundings,
+                                  :price, :construction_year)
   end
 end
