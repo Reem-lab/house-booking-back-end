@@ -20,7 +20,11 @@ class V1::HousesController < ApplicationController
 
   def update; end
 
-  def destroy; end
+  def destroy
+     @house = House.find(params[:id])
+     @house.destroy
+     render json: { status: 200, message: 'Record deleted successfully' }
+  end
 
   private
   def house_params
