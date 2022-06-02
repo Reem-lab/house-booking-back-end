@@ -1,12 +1,13 @@
+require 'faker'
+
 FactoryBot.define do
   factory :user do
-<<<<<<< HEAD
-    name { Faker::Name.name }
-    email { Faker::Internet.email }
-    password { Faker::Internet.password }
+    sequence(:username) do
+      Faker::Name.unique.name.length > 20 ? Faker::Name.unique.name[0..19] : Faker::Name.unique.name
+    end
+    email { Faker::Internet.unique.email }
+    password { 'password' }
     password_confirmation { password }
-=======
-    username { 'MyString' }
->>>>>>> dev
+    role { %w[admin user][rand(0..1)] }
   end
 end

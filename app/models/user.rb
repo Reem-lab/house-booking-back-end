@@ -12,5 +12,4 @@ class User < ApplicationRecord
   validates :username, presence: true, length: { minimum: 2, maximum: 20 }
   has_many :houses
   has_many :reservations
-
 end
