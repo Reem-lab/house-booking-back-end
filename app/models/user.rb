@@ -9,5 +9,8 @@ class User < ApplicationRecord
   validates :email, presence: true, uniqueness: true
   validates :password, presence: true, length: { minimum: 6, maximum: 20 }
   validates :password_confirmation, presence: true, length: { minimum: 6, maximum: 20 }
-  validates :name, presence: true, length: { minimum: 2, maximum: 20 }
+  validates :username, presence: true, length: { minimum: 2, maximum: 20 }
+  has_many :houses
+  has_many :reservations
+
 end
