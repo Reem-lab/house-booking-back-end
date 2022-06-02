@@ -5,7 +5,12 @@ class V1::HousesController < ApplicationController
   end
 
   def show
-    render json: House.find(params[:id])
+    house = House.find_by(id: params[:id])
+    if house.nil?
+      render status: 404, json: { error: 'House not found' }.to_json
+    else
+      render json: house
+    end
   end
 
   def create
