@@ -1,4 +1,7 @@
 class House < ApplicationRecord
+  belongs_to :user
+  has_many :reservations, dependent: :destroy
+
   validates :address, presence: true
   validates :city, presence: true
   validates :zip_code, presence: true, numericality: { greater_than: 0 }
