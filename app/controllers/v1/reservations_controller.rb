@@ -22,6 +22,21 @@ class V1::ReservationsController < ApplicationController
     end
   end
 
+  def update
+    @reservation = Reservation.find_by(id: params[:id])
+
+    if @reservation.nil?
+      render status: 404, json: { error: 'Reservation not found' }.to_json
+      return
+    end
+
+    if @reservation.update(reservation_params)
+      render json: @reservation, status: 200, message: 'Reservation updated'
+    else
+      render status: 500, json: { error: 'Reservation could not be updated' }.to_json
+    end
+  end
+
   def destroy
     @reservation = Reservation.find_by(id: params[:id])
 
