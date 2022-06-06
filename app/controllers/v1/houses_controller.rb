@@ -1,4 +1,6 @@
 class V1::HousesController < ApplicationController
+  before_action :authenticate_user!
+
   def index
     houses = House.all
     render json: houses
