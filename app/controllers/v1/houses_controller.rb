@@ -32,7 +32,7 @@ class V1::HousesController < ApplicationController
       }
     else
       render json: {
-        status: { code: 404, message: 'The House can not be created!' }
+        status: { code: 404, message: 'The House could not be created!' }
       }
     end
   end
@@ -54,7 +54,7 @@ class V1::HousesController < ApplicationController
       }
     else
       render json: {
-        status: { code: 500, message: 'Bad request, House can not be updated' }
+        status: { code: 500, message: 'Bad request, House could not be updated' }
       }
     end
   end
