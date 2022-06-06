@@ -1,4 +1,4 @@
-user_1 = User.create(username: 'sahar')
+user_1 = User.create(username: 'sahar', email:"sahar@example.com", password: '123123', password_confirmation: '123123')
 
 house_1 = House.create(
   user: user_1,
