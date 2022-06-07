@@ -2,16 +2,23 @@ class V1::HousesController < ApplicationController
   before_action :authenticate_user!
 
   def index
-    houses = House.all
-    render json: houses
+    render json: {
+      status: { code: 200, message: 'Houses were fetched sucessfully.' },
+      data: House.all
+    }
   end
 
   def show
     house = House.find_by(id: params[:id])
     if house.nil?
-      render status: 404, json: { error: 'House not found' }.to_json
+      render json: {
+        status: { code: 404, message: 'House not found.' }
+      }
     else
-      render json: house
+      render json: {
+        status: { code: 200, message: 'The House was fetched sucessfully.' },
+        data: house
+      }
     end
   end
 
@@ -19,25 +26,52 @@ class V1::HousesController < ApplicationController
     @house = House.create(house_params)
 
     if @house.save
-      render json: { status: 200, message: 'new house created successfully' }
+      render json: {
+        status: { code: 200, message: 'House created sucessfully.' },
+        data: @house
+      }
     else
-      render json: { status: 400, message: 'can not be created!' }
+      render json: {
+        status: { code: 404, message: 'The House could not be created!' }
+      }
     end
   end
 
   def update
     @house = House.find(params[:id])
+
+    if @house.nil?
+      render json: {
+        status: { code: 404, message: 'The House not found' }
+      }
+      return
+    end
+
     if @house.update(house_params)
-      render json: @house, status: 200, message: 'house updated successfully'
+      render json: {
+        status: { code: 200, message: 'House updated successfully' },
+        data: @house
+      }
     else
-      render json: @house.errors, status: :unprocessable_entity
+      render json: {
+        status: { code: 500, message: 'Bad request, House could not be updated' }
+      }
     end
   end
 
   def destroy
     @house = House.find(params[:id])
+
+    if @house.nil?
+      render json: {
+        status: { code: 404, message: 'House not found' }
+      }
+      return
+    end
     @house.destroy
-    render json: { status: 200, message: 'Record deleted successfully' }
+    render json: {
+      status: { code: 200, message: 'House was deleted successfully' }
+    }
   end
 
   private

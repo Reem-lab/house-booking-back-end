@@ -2,15 +2,23 @@ class V1::ReservationsController < ApplicationController
   before_action :authenticate_user!
 
   def index
-    render json: Reservation.all.to_json
+    render json: {
+      status: { code: 200, message: 'Reservations were fetched sucessfully.' },
+      data: Reservation.all
+    }
   end
 
   def show
     reservation = Reservation.find_by(id: params[:id])
     if reservation.nil?
-      render status: 404, json: { error: 'Reservation not found' }.to_json
+      render json: {
+        status: { code: 404, message: 'Reservation not found.' }
+      }
     else
-      render json: reservation.to_json
+      render json: {
+        status: { code: 200, message: 'The reservation was fetched sucessfully.' },
+        data: reservation
+      }
     end
   end
 
@@ -18,9 +26,14 @@ class V1::ReservationsController < ApplicationController
     @reservation = Reservation.new(reservation_params)
 
     if @reservation.save
-      render json: @reservation.to_json, status: 201
+      render json: {
+        status: { code: 200, message: 'Reservation created sucessfully.' },
+        data: @reservation
+      }
     else
-      render status: 500, json: { error: 'Reservation could not be created' }.to_json
+      render json: {
+        status: { code: 404, message: 'The reservation could not be created!' }
+      }
     end
   end
 
@@ -28,14 +41,18 @@ class V1::ReservationsController < ApplicationController
     @reservation = Reservation.find_by(id: params[:id])
 
     if @reservation.nil?
-      render status: 404, json: { error: 'Reservation not found' }.to_json
-      return
-    end
-
-    if @reservation.update(reservation_params)
-      render json: @reservation, status: 200, message: 'Reservation updated'
+      render json: {
+        status: { code: 404, message: 'Reservation not found.' }
+      }
+    elsif @reservation.update(reservation_params)
+      render json: {
+        status: { code: 200, message: 'Reservation updated successfully' },
+        data: @reservation
+      }
     else
-      render status: 500, json: { error: 'Reservation could not be updated' }.to_json
+      render json: {
+        status: { code: 500, message: 'Bad request, Reservation could not be updated' }
+      }
     end
   end
 
@@ -43,16 +60,22 @@ class V1::ReservationsController < ApplicationController
     @reservation = Reservation.find_by(id: params[:id])
 
     if @reservation.nil?
-      render status: 404, json: { error: 'Reservation not found' }.to_json
+      render json: {
+        status: { code: 404, message: 'Reservation not found.' }
+      }
       return
     end
 
     @reservation.destroy
 
     if @reservation.destroyed?
-      render status: 200, json: { message: 'Reservation destroyed' }.to_json
+      render json: {
+        status: { code: 200, message: 'Reservation was deleted successfully' }
+      }
     else
-      render status: 500, json: { error: 'Reservation could not be destroyed' }.to_json
+      render json: {
+        status: { code: 500, message: 'Bad request, Reservation could not be deleted' }
+      }
     end
   end
 
