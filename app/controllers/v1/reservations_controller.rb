@@ -2,9 +2,18 @@ class V1::ReservationsController < ApplicationController
   before_action :authenticate_user!
 
   def index
+    reserved = []
+    current_user.reservations.all.each do |reservation|
+      reserved << {
+        id: reservation.id,
+        date: reservation.date,
+        house: reservation.house.address,
+        user: reservation.user.username
+      }
+    end
     render json: {
       status: { code: 200, message: 'Reservations were fetched sucessfully.' },
-      data: Reservation.all
+      data: reserved
     }
   end
 
