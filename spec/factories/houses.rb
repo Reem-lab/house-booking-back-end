@@ -1,13 +1,17 @@
+require 'faker'
+
 FactoryBot.define do
   factory :house do
-    address { 'MyString' }
-    city { 'MyString' }
-    zip_code { 1 }
-    image { 'MyString' }
-    rooms { 1 }
-    bathrooms { 1 }
-    surroundings { 'MyString' }
-    price { '9.99' }
-    construction_year { 1 }
+    sequence(:address) { Faker::Address.street_address }
+    sequence(:city) { Faker::Address.city }
+    sequence(:zip_code) { Faker::Number.non_zero_digit }
+    sequence(:image) { Faker::LoremFlickr.image }
+    sequence(:bathrooms) { Faker::Number.non_zero_digit }
+    sequence(:rooms) { Faker::Number.non_zero_digit }
+    sequence(:surroundings) { Faker::Lorem.word }
+    sequence(:price) { Faker::Number.non_zero_digit }
+    sequence(:construction_year) { Faker::Number.non_zero_digit }
+    user = User.first
+    user_id { user.id }
   end
 end
