@@ -26,6 +26,58 @@ house_2 = House.create(
   construction_year: 2004
 )
 
+house_3 = House.create(
+  user: user_1,
+  address: 'st 30/10',
+  city: 'beirut',
+  zip_code: 1101,
+  image: 'https://images.unsplash.com/photo-1605146768851-eda79da39897?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80',
+  bathrooms: 2,
+  rooms: 1,
+  surroundings: 'city',
+  price: 250,
+  construction_year: 2004
+)
+
+house_4 = House.create(
+  user: user_1,
+  address: 'st 30/10',
+  city: 'beirut',
+  zip_code: 1101,
+  image: 'https://images.unsplash.com/photo-1605146768851-eda79da39897?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80',
+  bathrooms: 2,
+  rooms: 1,
+  surroundings: 'city',
+  price: 250,
+  construction_year: 2004
+)
+
+house_5 = House.create(
+  user: user_1,
+  address: 'st 30/10',
+  city: 'beirut',
+  zip_code: 1101,
+  image: 'https://images.unsplash.com/photo-1605146768851-eda79da39897?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80',
+  bathrooms: 2,
+  rooms: 1,
+  surroundings: 'city',
+  price: 250,
+  construction_year: 2004
+)
+
+house_6 = House.create(
+  user: user_1,
+  address: 'st 30/10',
+  city: 'beirut',
+  zip_code: 1101,
+  image: 'https://images.unsplash.com/photo-1605146768851-eda79da39897?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80',
+  bathrooms: 2,
+  rooms: 1,
+  surroundings: 'city',
+  price: 250,
+  construction_year: 2004
+)
+
 Reservation.create(user: user_1, house: house_1, date: Date.today+rand(10000))
 Reservation.create(user: user_1, house: house_2, date: Date.today+rand(10000))
 Reservation.create(user: user_1, house: house_2, date: Date.today+rand(10000))

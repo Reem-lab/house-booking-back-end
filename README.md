@@ -1,24 +1,160 @@
-# README
+![](https://img.shields.io/badge/Microverse-blueviolet)
+![](https://img.shields.io/static/v1?label=BY&message=Reemoz&color=pink)
+![](https://img.shields.io/static/v1?label=BY&message=Sahar&color=red)
+![](https://img.shields.io/static/v1?label=BY&message=Piero&color=blue)
+![](https://img.shields.io/static/v1?label=BY&message=Aime&color=green)
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# Rent Me 
 
-Things you may want to cover:
+> This is a Ruby on Rails API part of a full-stack project called "Rent me", This Project is based on an app to book an appointment to rent a house, You can see different types of houses and you can see the details for each house then you can reserve an appointment to the specific house that you also choose you can see all your reservations on a separate page, as well as you can Add a new house and delete a house if you are the admin.
+
+
+## API Full Documentation
+
+ - Much more populated documentation for this API was made with Postman and [can be found here](). It includes all  the available methods, required headers and parameters, and examples for different responses
+
+ 
+## Front-end Repository 
+
+[ReactApp](https://github.com/piero-vic/house-booking-front-end)
+
+## Video Demo 🎥
+
+
+
+## Heroku Deploy link
+
+[Heroku Deploy]()
+
+
+## Built With
+
+- Ruby
+- Ruby on Rails
+- PostgreSQL
+- React.js
+- Redux
+
+## Tools and extensions
+
+- Thunder Client
+- Tailwind CSS
+- Redux devtools.
+
+## Technologies used: 
+
+- Visual Studio Code
+
+
+## Configuration
+
+To use this project you first need to have installed the following:
+
++ Node.js
++ Ruby
++ PostgreSQL
++ Rails
 
 * Ruby version
 
-* System dependencies
+The version of ruby that is needed for this project is 
 
-* Configuration
++ 3.1.1
 
-* Database creation
+Once you have installed them, you need to use the following command to clone the repository:
 
-* Database initialization
+```
+git clone https://github.com/Reem-lab/house-booking-back-end.git
+```
 
-* How to run the test suite
+## After you Clone 
 
-* Services (job queues, cache servers, search engines, etc.)
+Commands to run:
+```
+bundle install
+```
 
-* Deployment instructions
+### Database creation
 
-* ...
+Next, use this command to create the databases:
+```
+rails db:create
+```
+
+And you have to migrate the DB:
+```
+
+rails db:migrate
+```
+
+## Usage
+
+Finally, use the following command to initialize the live server:
+
+```
+rails s
+```
+
+```
+
+open on your browser "localhost:3000"
+```
+
+## Authors
+
+
+👤 **Reem Janina**
+
+ Platform | Badge |
+ --- | --- |
+ **GitHub**  | [@Reem-lab](https://github.com/Reem-lab)
+ **Twitter** | [Rem79940127](https://twitter.com/Rem79940127)
+ **LinkdIn** | [reem-janina](https://www.linkedin.com/in/reem-janina-ab74ab21a/)
+
+ 👤 **Sahar Abdel Samad**
+
+ Platform | Badge |
+ --- | --- |
+ **GitHub**  | [Sahar-AbdelSamad](https://github.com/Sahar-AbdelSamad)
+ **Twitter** | [@AbdelSamadSaha](https://twitter.com/AbdelSamadSahar)
+ **LinkdIn** | [Sahar-Abdel-Samad](https://www.linkedin.com/in/sahar-abdel-samad/)
+
+ 👤 **Piero Lescano**
+
+ Platform | Badge |
+ --- | --- |
+ **GitHub**  | [@piero-vic](https://github.com/piero-vic)
+ **Twitter** | [@v1ccenzo](https://twitter.com/v1ccenzo)
+ **LinkdIn** | [piero-lescano](https://www.linkedin.com/in/piero-lescano/)
+
+ 👤 **Aime Malaika**
+
+ Platform | Badge |
+ --- | --- |
+ **GitHub**  | [@aimemalaika](https://github.com/aimemalaika)
+ **Twitter** | [@Aime_Malaika](https://twitter.com/Aime_Malaika)
+ **LinkdIn** | [aimemalaika](https://www.linkedin.com/in/aimemalaika/)
+
+ 
+
+
+## 🤝 Contributing
+
+Contributions, issues, and feature requests are welcome!
+
+Feel free to check the [issues page](../../issues/).
+
+## Show your support
+
+Give a ⭐️ if you like this project!
+
+## Acknowledgments
+
+- Hat tip to anyone whose code was used
+- Inspiration
+- etc
+
+## 📝 License
+
+This project is [MIT](./LICENSE) licensed.
+
