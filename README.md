@@ -11,7 +11,7 @@
 
 ## API Full Documentation
 
- - Much more populated documentation for this API was made with Postman and [can be found here](). It includes all  the available methods, required headers and parameters, and examples for different responses
+ - Much more populated documentation for this API was made with Postman and [can be found here](https://documenter.getpostman.com/view/17756817/UzBgup9u). It includes all  the available methods, required headers and parameters, and examples for different responses
 
  
 ## Front-end Repository 
