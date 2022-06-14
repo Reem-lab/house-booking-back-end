@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe Users::RegistrationsController, type: :request do
+RSpec.describe V1::Users::RegistrationsController, type: :request do
   describe 'POST v1/signup' do
     it 'creates a new user' do
       post '/v1/signup',

@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe Users::SessionsController, type: :request do
+RSpec.describe V1::Users::SessionsController, type: :request do
   before(:all) do
     @user = FactoryBot.create(:user)
   end
