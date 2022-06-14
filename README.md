@@ -6,12 +6,12 @@
 
 # Rent Me 
 
-> This is a Ruby on Rails API part of a full-stack project called "Rent me", This Project is based on an app to book an appointment to rent a house, You can see different types of houses and you can see the details for each house then you can reserve an appointment to the specific house that you also choose you can see all your reservations on a separate page, as well as you can Add a new house and delete a house if you are the admin.
+> This is a Ruby on Rails API part of a full-stack project called "Rent me", This Project is based on an app to book an appointment to rent a house, You can see different types of houses and you can see the details for each house then you can reserve an appointment to the specific house that you also choose you can see all your reservations on a separate page. The user also can add and delete a house.
 
 
 ## API Full Documentation
 
- - Much more populated documentation for this API was made with Postman and [can be found here](https://documenter.getpostman.com/view/17756817/UzBgup9u). It includes all  the available methods, required headers and parameters, and examples for different responses
+ - Much more populated documentation for this API was made with Postman and [can be found here](https://documenter.getpostman.com/view/17756817/UzBgup9u). It includes all  the available methods, required headers and parameters, and examples for different responses. The application is deployed if you want to try it replace `localhost:3001` with `https://aqueous-temple-36685.herokuapp.com`.
 
  
 ## Front-end Repository 
@@ -19,26 +19,19 @@
 [ReactApp](https://github.com/piero-vic/house-booking-front-end)
 
 
-## Heroku Deploy link
-
-[Heroku Deploy]()
-
-
 ## Built With
 
 - Ruby
 - Ruby on Rails
 - PostgreSQL
-- React.js
-- Redux
+- Devise JWT
 
 ## Tools and extensions
 
 - Thunder Client
-- Tailwind CSS
-- Redux devtools.
+- Postman for documentation.
 
-## Technologies used: 
+## Technologies used
 
 - Visual Studio Code
 
@@ -94,7 +87,7 @@ rails s
 
 ```
 
-open on your browser "localhost:3000"
+The server will be running on "localhost:3001"
 ```
 
 ## Authors
@@ -147,9 +140,7 @@ Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 
-- Hat tip to anyone whose code was used
-- Inspiration
-- etc
+- Microverse
 
 ## 📝 License
 
