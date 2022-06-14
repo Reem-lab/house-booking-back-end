@@ -18,9 +18,6 @@
 
 [ReactApp](https://github.com/piero-vic/house-booking-front-end)
 
-## Video Demo 🎥
-
-
 
 ## Heroku Deploy link
 
