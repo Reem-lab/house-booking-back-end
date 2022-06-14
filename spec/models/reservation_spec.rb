@@ -21,7 +21,7 @@ RSpec.describe Reservation, type: :model do
   end
 
   subject do
-    Reservation.new(user: @user, house: @house, date: Date.today+rand(10000))
+    Reservation.new(user: @user, house: @house, date: Date.today + rand(10_000))
   end
   before { subject.save }
 
