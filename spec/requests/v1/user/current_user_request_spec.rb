@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe 'CurrentUsers', type: :request do
+RSpec.describe V1::Users::CurrentUserController, type: :request do
   before(:all) do
     @user = FactoryBot.create(:user)
     post '/v1/login', params: { user: { email: @user.email, password: @user.password } }, as: :json
