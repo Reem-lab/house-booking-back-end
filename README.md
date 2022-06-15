@@ -89,6 +89,15 @@ rails s
 
 The server will be running on "localhost:3001"
 ```
+## How to run the tests
+
+```
+rspec spec
+```
+### or :
+```
+rspec spec/models
+rspec spec/requests
 
 ## Authors
 
