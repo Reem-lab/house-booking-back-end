@@ -8,6 +8,11 @@
 
 > This is a Ruby on Rails API part of a full-stack project called "Rent me", This Project is based on an app to book an appointment to rent a house, You can see different types of houses and you can see the details for each house then you can reserve an appointment to the specific house that you also choose you can see all your reservations on a separate page. The user also can add and delete a house.
 
+## Kanban board
+
+- [Link to the initial state of our Kanban board](https://user-images.githubusercontent.com/87965534/171515644-043c6210-3210-40ff-ad71-9a1ca5c5dbdb.png)
+- [Link to the final state of our Kanban board](https://github.com/Reem-lab/house-booking-back-end/projects/1)
+- [Our team consist of 4 members](#authors)
 
 ## API Full Documentation
 
