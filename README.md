@@ -6,7 +6,7 @@
 
 # Rent Me 
 
-> This is a Ruby on Rails API part of a full-stack project called "Rent me", This Project is based on an app to book an appointment to rent a house, You can see different types of houses and you can see the details for each house then you can reserve an appointment to the specific house that you also choose you can see all your reservations on a separate page. The user also can add and delete a house.
+> This is a Ruby on Rails API part of a full-stack project called "Rent me". This project is based on an app to book an appointment to rent a house. You can see different types of houses and you can see the details for each house then you can reserve an appointment to the specific house that you also choose you can see all your reservations on a separate page. The user also can add and delete a house.🏠🏡
 
 ## Kanban board
 
